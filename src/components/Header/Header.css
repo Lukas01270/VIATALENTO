@@ -1,0 +1,89 @@
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Barra superior: redes + email */
+.top-bar {
+  background-color: #1e293b; /* Azul oscuro */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.email {
+  margin-left: auto;
+  padding-left: 999px;
+}
+
+/* Navegación principal (contenedor raíz) */
+.main-nav {
+  background-color: #f3f4f6; /* Gris claro */
+  padding: 10px 20px;
+  display: flex; /* 👈 Hacemos que .main-nav sea flex container */
+  align-items: center;
+  justify-content: space-between; /* Empuja logo a izquierda y botón a derecha */
+}
+
+/* Contenedor interno de la navegación (desde Navigation.tsx) */
+.navigation {
+  display: flex; /* 👈 Alinea logo y menú horizontalmente */
+  align-items: center;
+  gap: 30px; /* Espacio entre logo y menú */
+  flex-grow: 1; /* Ocupa todo el ancho disponible */
+}
+
+.logo {
+  height: 40px; /* 👈 Tamaño definitivo (ajusta según Figma) */
+  display: block;
+}
+
+/* Menú de navegación */
+.nav-menu {
+  display: flex;
+  gap: 25px; /* Espacio entre enlaces */
+  align-items: center;
+  flex-grow: 1; /* Empuja el botón "Campus Virtual" a la derecha */
+}
+
+.nav-item,
+.campus-button {
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.nav-item:hover,
+.campus-button:hover {
+  background-color: #e5e7eb;
+}
+
+.campus-button {
+  background-color: #fc6b02; /* Naranja */
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-left: auto; /* 👈 Empuja el botón a la derecha */
+}
+
+.campus-button:hover {
+  background-color: #f59e0b;
+}

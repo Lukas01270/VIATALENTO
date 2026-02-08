@@ -1,0 +1,190 @@
+.register-page {
+  min-height: 100vh;
+  background-color: #FFF8F8;
+  padding: 40px 20px;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.register-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Logo lado izquierdo */
+.register-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-logo img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+}
+
+/* Formulario lado derecho */
+.register-form-container {
+  flex: 1;
+  max-width: 500px;
+}
+
+.register-alert {
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #fbbf24;
+}
+
+.register-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-field {
+  margin-bottom: 25px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 14px;
+}
+
+.form-field input {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #D9D9D9;
+  border: 1px solid #D9D9D9;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-field input:focus {
+  outline: none;
+  border-color: #29C221;
+  background-color: #f0f0f0;
+}
+
+/* Campo de celular con prefijo */
+.phone-input {
+  display: flex;
+  align-items: center;
+  background-color: #D9D9D9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.phone-prefix {
+  padding: 12px 16px;
+  font-weight: 600;
+  color: #475569;
+  background-color: #c4c4c4;
+  border-right: 1px solid #b0b0b0;
+}
+
+.phone-input input {
+  border: none;
+  border-radius: 0;
+  background-color: #D9D9D9;
+}
+
+/* Botón de pagar */
+.pay-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #29C221;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 30px;
+}
+
+.pay-button:hover {
+  background-color: #22a01b;
+  transform: translateY(-2px);
+}
+
+.pay-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.dollar-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Info del curso */
+.course-info-summary {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.course-info-summary p {
+  margin: 5px 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+.course-info-summary strong {
+  color: #1e293b;
+}
+
+/* Error message */
+.error-message {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .register-logo img {
+    max-width: 200px;
+  }
+
+  .register-form-container {
+    max-width: 100%;
+  }
+
+  .register-form {
+    padding: 30px 20px;
+  }
+}

@@ -1,0 +1,434 @@
+.course-detail-page {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  padding: 0;
+}
+
+/* Hero Section */
+.course-hero {
+  display: flex;
+  gap: 60px;
+  padding: 60px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.course-hero-content {
+  flex: 1;
+}
+
+.course-hero-content h1 {
+  font-size: 2.5em;
+  color: #1e293b;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.course-description {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.course-hero-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.course-hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.enroll-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #3b49df;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enroll-button:hover {
+  background-color: #2d3bcc;
+}
+
+/* Features Cards */
+.course-features {
+  display: flex;
+  gap: 30px;
+  padding: 0 80px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.feature-icon {
+  font-size: 2.5em;
+}
+
+.feature-content h3 {
+  font-size: 1.2em;
+  color: #1e293b;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.feature-content p {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* Main Content */
+.course-main-content {
+  display: flex;
+  gap: 60px;
+  padding: 40px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #f9fafb;
+}
+
+.course-left-column {
+  flex: 2;
+}
+
+.course-right-column {
+  flex: 1;
+}
+
+/* Objetivos del curso */
+.course-objectives {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.course-objectives h2 {
+  font-size: 1.5em;
+  color: #1e293b;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.objectives-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.objectives-list li {
+  font-size: 16px;
+  color: #1e293b;
+  margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.bullet {
+  color: #ff6b00;
+  font-weight: bold;
+}
+
+/* Instructor */
+.course-instructor {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.course-instructor h2 {
+  font-size: 1.5em;
+  color: #1e293b;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.instructor-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.instructor-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #e5e7eb;
+}
+
+.instructor-info h3 {
+  font-size: 1.1em;
+  color: #1e293b;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.instructor-title {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.instructor-badge {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #e5e7eb;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* Course Info Box */
+.course-info-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  align-items: flex-start;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-icon {
+  font-size: 1.5em;
+}
+
+.info-label {
+  font-size: 16px;
+  color: #1e293b;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.info-detail {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.4;
+}
+
+/* Related Courses */
+.related-courses {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.related-courses h3 {
+  font-size: 1.2em;
+  color: #1e293b;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.related-course-card {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.related-course-card:last-of-type {
+  border-bottom: none;
+}
+
+.related-course-image {
+  width: 80px;
+  height: 60px;
+  background-color: #e5e7eb;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.related-course-info {
+  flex: 1;
+}
+
+.related-course-info p {
+  font-size: 14px;
+  color: #1e293b;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.free-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.see-more-link {
+  display: block;
+  color: #3b82f6;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.see-more-link:hover {
+  text-decoration: underline;
+}
+
+/* Certificate Section */
+.certificate-section {
+  display: flex;
+  gap: 60px;
+  padding: 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #fef9f3;
+  align-items: center;
+}
+
+.certificate-image {
+  flex: 1;
+  text-align: center;
+}
+
+.certificate-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.certificate-note {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.certificate-content {
+  flex: 1;
+}
+
+.certificate-content h2 {
+  font-size: 2em;
+  color: #1e293b;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.certificate-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.certificate-features li {
+  font-size: 16px;
+  color: #1e293b;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.feature-description {
+  font-size: 14px;
+  color: #475569;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.certificate-example {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #ff6b00;
+}
+
+.certificate-title {
+  font-size: 1.1em;
+  color: #1e293b;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.certificate-hours {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 15px;
+}
+
+.certificate-description {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.create-account-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-account-button:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .course-hero,
+  .course-features,
+  .course-main-content,
+  .certificate-section {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .course-hero-content h1 {
+    font-size: 2em;
+  }
+
+  .course-hero-image {
+    max-width: 100%;
+  }
+}
+.info-icon-img {
+  width: 3em;
+  height: 3em;
+}

@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Si usas un archivo CSS global, también puedes agregar: */
+body {
+  overflow-x: hidden; /* Evita scroll horizontal */
+}
+.about-page {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffffff;
+  padding: 40px 20px;
+  max-width: 1200px; /* 👈 CONTENEDOR PRINCIPAL CENTRADO */
+  margin: 0 auto; /* 👈 CENTRA TODO EL CONTENIDO */
+}
+
+/* Sección 1: Hero + Introducción */
+.hero-section {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 60px;
+  padding: 40px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.hero-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #475569;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.features-list li::before {
+  content: "✓";
+  color: #10b981;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Sección 2: Misión y Visión */
+.mission-vision-section {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+  padding: 40px;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.mission, .vision {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.mission h2, .vision h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.highlight {
+  color: #10b981;
+}
+
+.mission blockquote, .vision blockquote {
+  font-style: italic;
+  font-size: 16px;
+  color: #475569;
+  margin: 0;
+  padding: 15px;
+  border-left: 4px solid #10b981;
+}
+
+/* Sección 3: Objetivos Estratégicos */
+.objectives-section {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+  padding: 40px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.objectives-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.objectives-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.objectives-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.objectives-content h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.objectives-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.objectives-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #475569;
+}
+
+.objectives-list li::before {
+  content: "○";
+  color: #3b82f6;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Sección 4: Valores Institucionales */
+.values-section {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+  padding: 40px;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  width: 100%;
+  flex-direction: row-reverse;
+}
+
+.values-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.values-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.values-content {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+}
+
+.values-content h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.values-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.values-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #475569;
+}
+
+.values-list li::before {
+  content: "○";
+  color: #3b82f6;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section, 
+  .mission-vision-section, 
+  .objectives-section, 
+  .values-section {
+    flex-direction: column;
+  }
+
+  .values-section {
+    flex-direction: column; /* 👈 Override del row-reverse en mobile */
+  }
+
+  .hero-content h1 {
+    font-size: 2em;
+  }
+
+  .mission, .vision {
+    padding: 15px;
+  }
+
+  .objectives-content h2, 
+  .values-content h2 {
+    font-size: 1.5em;
+  }
+}
