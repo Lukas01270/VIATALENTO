@@ -29,7 +29,7 @@ const SocialIcon: React.FC<SocialIconProps> = ({ href, ariaLabel, children }) =>
 const SocialIcons: React.FC = () => {
   return (
     <div className="social-icons">
-      <SocialIcon href="https://facebook.com" ariaLabel="Facebook">
+      <SocialIcon href="https://www.facebook.com/viatalentobolivia?locale=es_LA" ariaLabel="Facebook">
         <img src={facebookImg} alt="Facebook" />
       </SocialIcon>
       <SocialIcon href="https://instagram.com" ariaLabel="Instagram">

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ViaTalentoVertical from '../../assets/ViaTalentoVertical.png';
 
 interface NavItemProps {
   to: string;
@@ -19,7 +18,7 @@ const Navigation: React.FC = () => {
   return (
     <div className="navigation">
       {/* Logo a la izquierda */}
-      <img src={ViaTalentoVertical} alt="Via Talento" className="logo" />
+      <img src="/assets/viatalentoH.png" alt="Logo" className="logo" />
       
       {/* Contenedor para los enlaces de navegación (centrado) */}
       <div className="nav-center">

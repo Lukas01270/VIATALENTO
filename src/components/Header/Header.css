@@ -27,7 +27,7 @@
 
 .email {
   margin-left: auto;
-  padding-left: 999px;
+  padding-left: 800px;
 }
 
 /* Navegación principal (contenedor raíz) */
@@ -43,13 +43,19 @@
 .navigation {
   display: flex; /* 👈 Alinea logo y menú horizontalmente */
   align-items: center;
-  gap: 30px; /* Espacio entre logo y menú */
+  gap: 50px; /* Espacio entre logo y menú */
   flex-grow: 1; /* Ocupa todo el ancho disponible */
 }
 
 .logo {
-  height: 40px; /* 👈 Tamaño definitivo (ajusta según Figma) */
+  height: 50px; /* o el tamaño que quieras */
+  width: auto;
   display: block;
+  object-fit: contain;
+  /* Elimina espacios */
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 /* Menú de navegación */

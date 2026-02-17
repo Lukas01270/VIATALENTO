@@ -8,33 +8,31 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
+  overflow-x: hidden;
 }
 
-/* Si usas un archivo CSS global, también puedes agregar: */
-body {
-  overflow-x: hidden; /* Evita scroll horizontal */
-}
 .about-page {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Segoe UI', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #ffffff;
   padding: 40px 20px;
-  max-width: 1200px; /* 👈 CONTENEDOR PRINCIPAL CENTRADO */
-  margin: 0 auto; /* 👈 CENTRA TODO EL CONTENIDO */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Sección 1: Hero + Introducción */
 .hero-section {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 50px;
-  margin-bottom: 60px;
-  padding: 40px;
-  background-color: #f9fafb;
-  border-radius: 12px;
+  margin-bottom: 80px;
+  padding: 50px 40px;
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  border-radius: 16px;
   width: 100%;
-  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .hero-content {
@@ -42,30 +40,49 @@ body {
   min-width: 0;
 }
 
-.hero-content h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+.hero-title {
+  font-size: 3em;
+  margin-bottom: 10px;
   color: #1e293b;
+  font-weight: 800;
+  letter-spacing: -0.5px;
 }
 
-.hero-content p {
+.hero-subtitle {
+  font-size: 1.8em;
+  margin-bottom: 25px;
+  color: #fc6b02;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.hero-description {
   font-size: 16px;
   margin-bottom: 20px;
   color: #475569;
+  line-height: 1.8;
 }
 
 .features-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 30px 0 0 0;
+  display: grid;
+  gap: 12px;
 }
 
 .features-list li {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 12px;
   color: #1e293b;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: transform 0.2s ease;
+}
+
+.features-list li:hover {
+  transform: translateX(5px);
 }
 
 .features-list li::before {
@@ -73,10 +90,17 @@ body {
   color: #10b981;
   font-weight: bold;
   font-size: 1.2em;
+  background: rgba(16, 185, 129, 0.1);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .hero-image {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,35 +112,59 @@ body {
   height: auto;
   object-fit: contain;
   display: block;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.02);
 }
 
 /* Sección 2: Misión y Visión */
 .mission-vision-section {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   padding: 40px;
   background-color: #f3f4f6;
-  border-radius: 12px;
+  border-radius: 16px;
   width: 100%;
 }
 
 .mission, .vision {
-  flex: 1;
-  padding: 20px;
+  padding: 35px;
   background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission:hover, .vision:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .mission h2, .vision h2 {
   font-size: 2em;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: #1e293b;
+  font-weight: 700;
 }
 
 .highlight {
-  color: #10b981;
+  color: #fc6b02;
+  position: relative;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
 }
 
 .mission blockquote, .vision blockquote {
@@ -124,23 +172,28 @@ body {
   font-size: 16px;
   color: #475569;
   margin: 0;
-  padding: 15px;
-  border-left: 4px solid #10b981;
+  padding: 20px;
+  border-left: 4px solid #5cba01;
+  background: #f9fafb;
+  border-radius: 0 8px 8px 0;
+  line-height: 1.8;
 }
 
 /* Sección 3: Objetivos Estratégicos */
 .objectives-section {
-  display: flex;
-  gap: 40px;
-  margin-bottom: 60px;
-  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 80px;
+  padding: 50px 40px;
   background-color: #f9fafb;
-  border-radius: 12px;
+  border-radius: 16px;
   width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .objectives-image {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,54 +203,115 @@ body {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  display: block;
+  border-radius: 12px;
+  
 }
 
 .objectives-content {
-  flex: 1;
-  min-width: 0;
+  width: 100%;
 }
 
-.objectives-content h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
+.section-title {
+  font-size: 2.5em;
+  margin-bottom: 35px;
   color: #1e293b;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
 }
 
-.objectives-list {
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+ 
+  border-radius: 2px;
+}
+
+.objectives-list, .values-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  gap: 25px;
 }
 
-.objectives-list li {
+.objective-item, .value-item {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 20px;
-  color: #475569;
+  gap: 15px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
 }
 
-.objectives-list li::before {
-  content: "○";
-  color: #3b82f6;
+.objective-item:hover, .value-item:hover {
+  transform: translateX(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #10b981;
+}
+
+.objective-bullet, .value-bullet {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #3b82f6;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 6px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.objective-item:hover .objective-bullet,
+.value-item:hover .value-bullet {
+  background: #3b82f6;
+  transform: scale(1.3);
+}
+
+.objective-text, .value-text {
+  flex: 1;
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.7;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.objective-text strong, .value-text strong {
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.objective-separator, .value-separator {
+  color: #10b981;
   font-weight: bold;
-  font-size: 1.2em;
 }
 
 /* Sección 4: Valores Institucionales */
 .values-section {
-  display: flex;
-  gap: 40px;
-  margin-bottom: 60px;
-  padding: 40px;
-  background-color: #f3f4f6;
-  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 80px;
+  padding: 50px 40px;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  border-radius: 16px;
   width: 100%;
-  flex-direction: row-reverse;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .values-image {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,64 +321,129 @@ body {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  display: block;
+  border-radius: 12px;
+ 
 }
 
 .values-content {
-  flex: 1;
-  min-width: 0;
-  padding: 0;
+  width: 100%;
 }
 
-.values-content h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #1e293b;
-}
-
-.values-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.values-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 20px;
-  color: #475569;
-}
-
-.values-list li::before {
-  content: "○";
-  color: #3b82f6;
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-section, 
-  .mission-vision-section, 
-  .objectives-section, 
+/* Responsive Design */
+@media (max-width: 968px) {
+  .hero-section,
+  .mission-vision-section,
+  .objectives-section,
   .values-section {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
+  .objectives-section,
   .values-section {
-    flex-direction: column; /* 👈 Override del row-reverse en mobile */
+    gap: 35px;
   }
 
-  .hero-content h1 {
+  .objectives-image,
+  .values-image {
+    order: -1;
+  }
+
+  .hero-title {
+    font-size: 2.2em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4em;
+  }
+
+  .section-title {
     font-size: 2em;
   }
 
   .mission, .vision {
-    padding: 15px;
-  }
-
-  .objectives-content h2, 
-  .values-content h2 {
-    font-size: 1.5em;
+    padding: 25px;
   }
 }
+
+@media (max-width: 640px) {
+  .about-page {
+    padding: 20px 15px;
+  }
+
+  .hero-section,
+  .mission-vision-section,
+  .objectives-section,
+  .values-section {
+    padding: 30px 20px;
+    margin-bottom: 50px;
+  }
+
+  .hero-title {
+    font-size: 1.8em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2em;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .section-title {
+    font-size: 1.6em;
+    margin-bottom: 25px;
+  }
+
+  .objective-item, .value-item {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .objective-text, .value-text {
+    font-size: 14px;
+  }
+
+  .objective-text strong, .value-text strong {
+    font-size: 15px;
+  }
+
+  .mission h2, .vision h2 {
+    font-size: 1.6em;
+  }
+
+  .mission blockquote, .vision blockquote {
+    font-size: 15px;
+    padding: 15px;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-section,
+.mission-vision-section,
+.objectives-section,
+.values-section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.objective-item, .value-item {
+  animation: fadeInUp 0.5s ease-out backwards;
+}
+
+.objective-item:nth-child(1), .value-item:nth-child(1) { animation-delay: 0.1s; }
+.objective-item:nth-child(2), .value-item:nth-child(2) { animation-delay: 0.2s; }
+.objective-item:nth-child(3), .value-item:nth-child(3) { animation-delay: 0.3s; }
+.objective-item:nth-child(4), .value-item:nth-child(4) { animation-delay: 0.4s; }
+.objective-item:nth-child(5), .value-item:nth-child(5) { animation-delay: 0.5s; }

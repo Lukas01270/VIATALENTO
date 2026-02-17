@@ -13,6 +13,9 @@ const HomePage = () => {
             Capacitaciones y servicios profesionales para el crecimiento continuo,
             con opciones tanto virtuales como presenciales.
           </p>
+          <Link to="/courses" className="hero-cta">
+            Explorar Cursos
+          </Link>
         </div>
         <div className="hero-image">
           <img src="/assets/HeroImagFF.png" alt="Graduada con diploma" />
@@ -74,15 +77,13 @@ const HomePage = () => {
              <div className="course-card">
               <h3>Programas</h3>
              </div>
-        </Link>
+          </Link>
         </div>
 
         <Link to="/courses">
           <button className="view-more-button">Ver más cursos</button>
         </Link>
       </section>
-
-      
 
       {/* Sección 3: ¿Por qué estudiar en Via Talento? */}
       <section className="why-section">
